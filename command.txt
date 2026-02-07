@@ -1,0 +1,19 @@
+function bro {
+    bun run dev
+}
+
+function py {
+    python 
+}
+
+function gi {
+    git init 
+}
+
+function ga {
+    git add 
+}
+
+function gc {
+    git commit 
+}
