@@ -17,3 +17,7 @@ function gcommit {
 function gs {
     git status
 }
+
+function gp{
+    git push origin main
+}
