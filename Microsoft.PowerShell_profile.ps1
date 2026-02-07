@@ -13,10 +13,15 @@ function bad {
 function br { 
     bun remove @args 
 }
-function bs{
-    bun switch @args
+function gsb{
+    git switch @args
 }
-
+function gco{
+    git checkout -b @args
+}
+function gbd {
+    git branch -d @args
+}
 function py {
     python @args
 }
@@ -45,6 +50,19 @@ function ginit{
 function gfetch{
     git fetch origin @args
 }
+function glog {
+    git log --oneline --graph --decorate
+}
 function bi {
     bun install @args
 }
+function ..{
+    Set-Location ..
+}
+function ... {
+ Set-Location ../.. 
+}
+function .... {
+ Set-Location ../../.. 
+}
+
