@@ -18,6 +18,12 @@ function gs {
     git status
 }
 
-function gpush{
+function gpush {
     git push origin main
+}
+function gb {
+    git branch @args
+}
+function ginit{
+    git init
 }

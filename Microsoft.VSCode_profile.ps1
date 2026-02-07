@@ -32,4 +32,7 @@ function ginit{
     git init
 }
 
+function gb{
+    git branch @args
+}
 
