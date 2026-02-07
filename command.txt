@@ -3,17 +3,17 @@ function bro {
 }
 
 function py {
-    python 
-}
-
-function gi {
-    git init 
+    python @args
 }
 
 function ga {
-    git add 
+    git add @args
 }
 
-function gc {
-    git commit 
+function gcommit {
+    git commit -m ($args -join " ")
+}
+
+function gs {
+    git status
 }
