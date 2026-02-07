@@ -18,6 +18,6 @@ function gs {
     git status
 }
 
-function gp{
+function gpush{
     git push origin main
 }
