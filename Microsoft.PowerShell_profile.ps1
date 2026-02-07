@@ -1,5 +1,20 @@
 function bro {
-    bun run dev
+    bun run dev 
+}
+ function brocook { 
+    bun run build 
+}
+function bi { 
+    bun install @args 
+ }
+function bad { 
+    bun add @args 
+}
+function br { 
+    bun remove @args 
+}
+function bs{
+    bun switch @args
 }
 
 function py {
@@ -10,7 +25,7 @@ function ga {
     git add @args
 }
 
-function gcommit {
+function gco {
     git commit -m ($args -join " ")
 }
 
@@ -26,4 +41,10 @@ function gb {
 }
 function ginit{
     git init
+}
+function gfetch{
+    git fetch origin @args
+}
+function bi {
+    bun install @args
 }
