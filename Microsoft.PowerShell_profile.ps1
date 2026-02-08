@@ -65,4 +65,19 @@ function ... {
 function .... {
  Set-Location ../../.. 
 }
+function cls {
+    clear
+}
+function rm {
+    Remove-Item @args -Confirm
+}
+
+function cp {
+    Copy-Item @args -Confirm
+}
+
+function mv {
+    Move-Item @args -Confirm
+}
+
 
