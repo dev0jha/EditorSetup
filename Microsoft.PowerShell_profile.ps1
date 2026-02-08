@@ -16,7 +16,7 @@ function br {
 function gsb{
     git switch @args
 }
-function gco{
+function gcb {
     git checkout -b @args
 }
 function gbd {
@@ -40,6 +40,9 @@ function gs {
 
 function gpush {
     git push origin main
+}
+function gpull {
+    git pull origin main
 }
 function gb {
     git branch @args
