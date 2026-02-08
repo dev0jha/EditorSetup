@@ -1,3 +1,5 @@
+Import-Module PSReadLine
+oh-my-posh init pwsh --config "$HOME\.oh-my-posh\custom.omp.json" | Invoke-Expression
 function bro {
     bun run dev 
 }
@@ -69,7 +71,7 @@ function .... {
  Set-Location ../../.. 
 }
 function cls {
-    clear
+    Clear-Host
 }
 function rm {
     Remove-Item @args -Confirm
@@ -82,5 +84,9 @@ function cp {
 function mv {
     Move-Item @args -Confirm
 }
+
+
+
+
 
 
