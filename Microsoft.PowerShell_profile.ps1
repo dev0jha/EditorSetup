@@ -1,5 +1,6 @@
 Import-Module PSReadLine
-oh-my-posh init pwsh --config "$HOME\.oh-my-posh\custom.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$HOME\Documents\WindowsPowerShell\custom.omp.json" | Invoke-Expression
+
 function bro {
     bun run dev 
 }

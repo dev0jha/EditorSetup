@@ -2,3 +2,4 @@
 
 # . $PROFILE is the default profile for PowerShell, but we want to use a different profile for VSCode. So we will import the Microsoft.PowerShell_profile.ps1 file, which contains the aliases and functions we want to use in VSCode.
 # cd $HOME\Documents\WindowsPowerShell 
+# cd $HOME\.oh-my-posh\custom.omp.json custom theme file 
