@@ -53,7 +53,7 @@ function gb {
 function ginit{
     git init
 }
-function gfetch{
+function gf{
     git fetch origin @args
 }
 function glog {
@@ -96,6 +96,16 @@ function touch {
         } else {
             New-Item -ItemType File -Path $file | Out-Null
         }
+    }
+}
+function mkdir {
+    param (
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]]$Path
+    )
+
+    foreach ($p in $Path) {
+        New-Item -ItemType Directory -Path $p -Force | Out-Null
     }
 }
 
