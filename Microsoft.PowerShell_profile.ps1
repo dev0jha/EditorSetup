@@ -108,6 +108,26 @@ function mkdir {
         New-Item -ItemType Directory -Path $p -Force | Out-Null
     }
 }
+function co {
+    param (
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]]$Path
+    )
+
+    foreach ($p in $Path) {
+        Copy-Item -Path $p -Destination (Split-Path -Path $p -Leaf) -Force
+    }
+}
+function mo {
+    param (
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]]$Path
+    )
+
+    foreach ($p in $Path) {
+        Move-Item -Path $p -Destination (Split-Path -Path $p -Leaf) -Force
+    }
+}
 
 
 
