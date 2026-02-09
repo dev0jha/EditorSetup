@@ -85,6 +85,20 @@ function cp {
 function mv {
     Move-Item @args -Confirm
 }
+function touch {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string[]]$Path
+    )
+    foreach ($file in $Path) {
+        if (Test-Path $file) {
+            (Get-Item $file).LastWriteTime = Get-Date
+        } else {
+            New-Item -ItemType File -Path $file | Out-Null
+        }
+    }
+}
+
 
 
 
