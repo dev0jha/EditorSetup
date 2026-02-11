@@ -71,7 +71,7 @@ function ... {
 function .... {
  Set-Location ../../.. 
 }
-function cls {
+function cl {
     Clear-Host
 }
 function rm {
@@ -127,6 +127,9 @@ function mo {
     foreach ($p in $Path) {
         Move-Item -Path $p -Destination (Split-Path -Path $p -Leaf) -Force
     }
+}
+function vs {
+    code . @args # Open the current directory in Visual Studio Code 
 }
 
 
