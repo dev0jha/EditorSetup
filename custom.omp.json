@@ -1,43 +1,48 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "final_space": true,
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
+          "type": "text",
+          "style": "plain",
           "foreground": "#d7db20",
-          "style": "plain",
-          "template": "\u279c",
-          "type": "text"
+          "template": "➜"
         },
         {
-          "foreground": "#5e3ce3",
-          "options": {
-            "style": "folder"
-          },
+          "type": "text",
           "style": "plain",
-          "template": "  {{ .Path }}",
-          "type": "path"
+          "foreground": "#4FC3F7",
+          "template": " WindowsPowerShell"
         },
         {
+          "type": "git",
+          "style": "plain",
           "foreground": "#2ee124",
+          "template": " git({{ .HEAD }})",
           "options": {
             "branch_icon": ""
-          },
-          "style": "plain",
-          "template": " <#1F4CE0>git:</>({{ .HEAD }})</>",
-          "type": "git"
-        },
-        {
-          "foreground": "#be26a8",
-          "style": "plain",
-          "template": " \u2717",
-          "type": "status"
+          }
         }
-      ],
-      "type": "prompt"
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "template": "   took {{ if lt .Ms 500 }}<#00ff00>{{ .FormattedMs }}</>{{ else if lt .Ms 2000 }}<#FFD700>{{ .FormattedMs }}</>{{ else }}<#ff5555>{{ .FormattedMs }}</>{{ end }}",
+          "options": {
+            "threshold": 100
+          }
+        }
+      ]
     }
-  ],
-  "final_space": true,
-  "version": 4
+  ]
 }
