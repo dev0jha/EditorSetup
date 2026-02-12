@@ -8,16 +8,19 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
           "foreground": "#d7db20",
-          "template": "➜"
+          "style": "plain",
+          "template": "\u279c",
+          "type": "text"
         },
         {
-          "type": "text",
+          "foreground": "#5e3ce3",
+          "options": {
+            "style": "folder"
+          },
           "style": "plain",
-          "foreground": "#4FC3F7",
-          "template": " WindowsPowerShell"
+          "template": "  {{ .Path }}",
+          "type": "path"
         },
         {
           "type": "git",
