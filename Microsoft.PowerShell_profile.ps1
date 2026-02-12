@@ -131,6 +131,45 @@ function mo {
 function vs {
     code . @args # Open the current directory in Visual Studio Code 
 }
+function zip {
+    param(
+        [Parameter(Mandatory)]
+        [string]$Source,
+
+        [string]$Dest
+    )
+
+    if (-not $Dest) {
+        $Dest = (Split-Path $Source -Leaf)
+    }
+
+    if ($Dest -notmatch '\.zip$') {
+        $Dest += '.zip'
+    }
+
+    Compress-Archive -Path $Source -DestinationPath $Dest -Force
+}
+function unzip {
+    param(
+        [Parameter(Mandatory)]
+        [string]$ZipFile,
+
+        [string]$Dest
+    )
+
+    if (-not (Test-Path $ZipFile)) {
+        Write-Error "File not found: $ZipFile"
+        return
+    }
+
+    if (-not $Dest) {
+        $Dest = (Split-Path $ZipFile -LeafBase)
+    }
+
+    Expand-Archive -Path $ZipFile -DestinationPath $Dest -Force
+}
+
+
 
 
 
