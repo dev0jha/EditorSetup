@@ -8,42 +8,32 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#d7db20",
+          "type": "text",
           "style": "plain",
-          "template": "\u279c",
-          "type": "text"
+          "foreground": "#d7db20",
+          "template": "➜"
         },
         {
+          "type": "path",
+          "style": "plain",
           "foreground": "#5e3ce3",
+          "template": "  {{ .Path }}",
           "options": {
             "style": "folder"
-          },
-          "style": "plain",
-          "template": "  {{ .Path }}",
-          "type": "path"
+          }
         },
         {
           "type": "git",
           "style": "plain",
-          "foreground": "#2ee124",
           "template": " git({{ .HEAD }})",
           "options": {
             "branch_icon": ""
-          }
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "type": "executiontime",
-          "style": "plain",
-          "template": "   took {{ if lt .Ms 500 }}<#00ff00>{{ .FormattedMs }}</>{{ else if lt .Ms 2000 }}<#FFD700>{{ .FormattedMs }}</>{{ else }}<#ff5555>{{ .FormattedMs }}</>{{ end }}",
-          "options": {
-            "threshold": 100
-          }
+          },
+          "foreground_templates": [
+            "{{ if eq .HEAD \"main\" }}#00ff00{{ end }}",
+            "{{ if eq .HEAD \"master\" }}#00ff00{{ end }}",
+            "{{ if ne .HEAD \"main\" }}{{ if ne .HEAD \"master\" }}#ff5555{{ end }}{{ end }}"
+          ]
         }
       ]
     }
