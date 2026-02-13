@@ -25,6 +25,9 @@ function gcb {
 function gbd {
     git branch -d @args
 }
+function gr{
+    git remote @args
+}
 function py {
     python @args
 }
@@ -168,6 +171,10 @@ function unzip {
 
     Expand-Archive -Path $ZipFile -DestinationPath $Dest -Force
 }
+function fastfetch{
+    fastfetch 
+}
+
 
 
 
