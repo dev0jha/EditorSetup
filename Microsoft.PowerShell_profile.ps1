@@ -171,8 +171,11 @@ function unzip {
 
     Expand-Archive -Path $ZipFile -DestinationPath $Dest -Force
 }
-function fastfetch{
-    fastfetch 
+function gmg {
+    git merge @args
+}
+function gst{
+    git stash @args
 }
 
 
