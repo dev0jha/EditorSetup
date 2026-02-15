@@ -20,10 +20,7 @@ function gsb{
     git switch @args
 }
 function gcb {
-    git checkout -b @args
-}
-function gbd {
-    git branch -d @args
+    git checkout @args
 }
 function gr{
     git remote @args
