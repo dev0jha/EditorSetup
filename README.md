@@ -2,7 +2,8 @@
 
 Streamlined PowerShell profile with Oh-My-Posh theming and custom shortcuts for Git, Bun, and file operations. Includes optimized VS Code settings.
 
-![Oh My Posh Setup](Setup.png)
+![Vs Code Setup](Setup.png)
+![terminal Setup](Terminal.png)
 
 ## 🚀 Quick Setup
 
