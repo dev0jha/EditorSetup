@@ -174,6 +174,10 @@ function gmg {
 function gst{
     git stash @args
 }
+function bu {
+    bun uninstall @args
+}
+
 
 
 
