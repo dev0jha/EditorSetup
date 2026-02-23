@@ -177,6 +177,9 @@ function gst{
 function bu {
     bun uninstall @args
 }
+function gshow{
+    git show @args
+}
 
 
 
