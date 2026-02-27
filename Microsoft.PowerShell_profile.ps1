@@ -13,6 +13,9 @@ function bi {
 function bad { 
     bun add @args 
 }
+function dev {
+     bun add -d @args
+}
 function br { 
     bun remove @args 
 }
