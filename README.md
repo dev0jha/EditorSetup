@@ -34,7 +34,6 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 - **Optimizations**: Disabled minimap, breadcrumbs; right sidebar
 
 
-
 ## 🎨 Required VS Code Extensions
 
 Install these for full functionality:
@@ -55,3 +54,7 @@ Get-ExecutionPolicy  # Should be RemoteSigned or Unrestricted
 
 **VS Code settings not applying?**  
 Press `Ctrl+Shift+P` → "Developer: Reload Window"
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
